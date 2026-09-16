@@ -1,58 +1,49 @@
 # Store Delivery Route Optimizer
 
-A practical desktop application for planning efficient multi-stop delivery routes from a warehouse to multiple stores.
+A Windows desktop application for planning a more efficient delivery sequence from one warehouse to multiple stores.
 
-> Developed from a real warehouse-to-store distribution need in a small food manufacturing business.
+> **Portfolio showcase. Production source code is maintained privately.**
 
-## Overview
+## Project origin
 
-Store Delivery Route Optimizer is a Python desktop prototype designed to simplify daily delivery planning. The user provides one warehouse or starting point and a list of stores, and the application generates an efficient visiting order for the delivery run.
+This project rebuilds and extends an earlier Python delivery-routing prototype created around a real multi-store delivery workflow.
 
-The project grew out of a real operational problem: deliveries from a warehouse to multiple retail stores had to be planned manually. The prototype was created to explore how a simple decision-support tool could reduce unnecessary travel and make route planning more systematic.
+The original operational problem, store/warehouse workflow, input requirements, testing priorities, and route validation were defined by **Shima Atabaki**.
 
-## Features
+## What it does
 
-- One warehouse / starting point
-- Up to 15 stores per delivery run
-- Store input by address or geographic coordinates
-- Multi-stop route optimization
-- Option to return to the warehouse after the final delivery
-- Route summary showing original order and optimized route
-- Distance-saved and estimated-driving-time outputs
-- Ordered stop list with resolved locations
-- Simple desktop graphical interface
+- Accepts one warehouse and up to **15 stores per run**
+- Accepts store names with addresses or direct coordinates
+- Calculates real road-network distance and driving time
+- Finds the **exact best visit sequence** within the supported store limit
+- Can optimize for shortest distance or fastest driving time
+- Supports an optional return to the warehouse
+- Shows the optimized road route on an interactive map
+- Compares the entered order with the optimized order
+- Exports the final stop sequence to CSV
 
 ## Screenshot
 
 *A screenshot of the desktop application will be added here.*
 
-## Optimization Approach
+## Why this project
 
-The project uses a nearest-neighbor routing approach to construct an efficient delivery sequence. Starting from the warehouse, the route proceeds to the nearest suitable unvisited stop and continues until all stores have been included.
+The project started from a practical distribution problem: when several stores need to be served from one warehouse, the order in which they are visited can create unnecessary distance and time.
 
-This is a practical heuristic rather than a guarantee of the globally optimal route. It is particularly useful as a lightweight approach for relatively small delivery runs, which was the original use case for this prototype.
-
-## Real-World Context
-
-The idea originated from a real distribution challenge in a food manufacturing and honey-packaging business. Deliveries to multiple stores required route decisions, while operational adoption also depended on cooperation from drivers and other stakeholders.
-
-That experience made the project more than a programming exercise: it demonstrated that a technically useful system does not create value unless people are willing and able to adopt it. This practical lesson later contributed to my interest in technology adoption, organizational readiness, and digital transformation in SMEs.
+The current version turns that operational idea into a reusable desktop tool with road-network routing, exact multi-stop optimization, map visualization, and exportable results.
 
 ## Technology
 
-- Python
-- Desktop GUI
-- Address / coordinate-based location input
-- Route optimization logic
+Python · Windows desktop UI · OpenStreetMap/Nominatim · OSRM · Folium
 
-## Project Status
+## Distribution
 
-This repository presents the project as a working prototype and portfolio project. The current version focuses on the core warehouse-to-store routing workflow rather than production-scale logistics optimization.
+A Windows executable is distributed separately from the private source repository.
 
-Potential future improvements include location search/autocomplete, map-based route visualization, traffic-aware routing, additional optimization criteria, and support for larger delivery networks.
+## Project role
 
-## Author
+**Shima Atabaki** — original concept and earlier prototype, problem definition, workflow and requirements, testing, validation, and product direction.
 
-**Shima Atabaki**
+## Status
 
-Background in Electronic Commerce, digital business, and food manufacturing, with research interests in technology adoption and digital transformation.
+Active refinement and testing.
