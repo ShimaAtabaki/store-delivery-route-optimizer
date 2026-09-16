@@ -1,49 +1,50 @@
 # Store Delivery Route Optimizer
 
-A Windows desktop application for planning a more efficient delivery sequence from one warehouse to multiple stores.
+A prototype desktop application exploring a practical warehouse-to-store delivery-routing problem.
 
-> **Portfolio showcase. Production source code is maintained privately.**
+> **Portfolio showcase. Source code is maintained separately.**
 
 ## Project origin
 
-This project rebuilds and extends an earlier Python delivery-routing prototype created around a real multi-store delivery workflow.
+This project is based on an earlier Python prototype developed from a real multi-store distribution need. The aim was to explore a more systematic way of ordering delivery stops rather than relying entirely on manual route planning.
 
-The original operational problem, store/warehouse workflow, input requirements, testing priorities, and route validation were defined by **Shima Atabaki**.
+The operational problem, delivery workflow, initial requirements, and testing were based on practical experience with warehouse-to-store distribution.
 
-## What it does
+## What it demonstrates
 
-- Accepts one warehouse and up to **15 stores per run**
-- Accepts store names with addresses or direct coordinates
-- Calculates real road-network distance and driving time
-- Finds the **exact best visit sequence** within the supported store limit
-- Can optimize for shortest distance or fastest driving time
-- Supports an optional return to the warehouse
-- Shows the optimized road route on an interactive map
-- Compares the entered order with the optimized order
-- Exports the final stop sequence to CSV
+- A warehouse as the starting point for a delivery run
+- Multiple store destinations
+- Store/location input through addresses or coordinates
+- Generation of a suggested delivery sequence
+- Comparison between the entered sequence and the suggested route
+- A desktop interface for experimenting with the routing workflow
+
+The application has been developed as a prototype and portfolio project. It should not be interpreted as a production logistics system or as guaranteeing a globally optimal route under all conditions.
 
 ## Screenshot
 
 *A screenshot of the desktop application will be added here.*
 
+## Routing approach
+
+The original prototype used a nearest-neighbor approach: beginning at the warehouse, it selected a nearby unvisited store as the next stop and repeated the process until the delivery locations had been visited.
+
+This type of heuristic is useful for exploring small routing problems, but it does not by itself guarantee the mathematically optimal route. The project is therefore presented primarily as a practical prototype and learning project rather than a commercial route-optimization product.
+
 ## Why this project
 
-The project started from a practical distribution problem: when several stores need to be served from one warehouse, the order in which they are visited can create unnecessary distance and time.
+The project originated from a real distribution workflow in which deliveries from a warehouse to several stores required route-planning decisions. It also highlighted a broader practical issue: the usefulness of a digital tool depends not only on its technical design, but also on whether people and organizations are prepared to adopt it.
 
-The current version turns that operational idea into a reusable desktop tool with road-network routing, exact multi-stop optimization, map visualization, and exportable results.
+That experience contributed to my interest in technology adoption, organizational readiness, and digital transformation in SMEs.
 
 ## Technology
 
-Python · Windows desktop UI · OpenStreetMap/Nominatim · OSRM · Folium
-
-## Distribution
-
-A Windows executable is distributed separately from the private source repository.
+Python-based desktop prototype. Additional routing, mapping, and interface components have been explored during development.
 
 ## Project role
 
-**Shima Atabaki** — original concept and earlier prototype, problem definition, workflow and requirements, testing, validation, and product direction.
+**Shima Atabaki** — problem identification, original prototype concept, workflow definition, requirements, testing, and project direction.
 
 ## Status
 
-Active refinement and testing.
+Prototype / portfolio project. Further refinement and validation are ongoing.
